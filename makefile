@@ -1,10 +1,7 @@
-FLAGS=
-LIBS=
+LIBS= -lgtest -lpthread
+test: test.cpp pair.h guess.h
+	g++ test.cpp -o test  $(LIBS) --std=c++11
 
-all: rental.cpp
-	g++ rental.cpp -c -Werror -fmax-errors=1
-
-.PHONY: clean
-
+.PHONEY: clean
 clean:
-	rm *.o rental
+	rm test

@@ -4,5 +4,4 @@ test: test.cpp pair.h guess.h
 
 .PHONEY: clean
 clean:
-	rm test
-<<< this is a change
+	rm test a.out
